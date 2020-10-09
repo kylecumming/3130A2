@@ -16,11 +16,13 @@
         android:layout_marginEnd="102dp"
         android:layout_marginRight="102dp"
         android:ems="10"
-        android:hint="User Name"
+        android:hint="@string/user_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="user name"
+        />
 
     <Button
         android:id="@+id/register_button"
@@ -31,7 +33,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="146dp"
         android:layout_marginRight="146dp"
-        android:text="Registration"
+        android:text="@string/registration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_address" />
@@ -46,9 +48,11 @@
         android:layout_marginEnd="104dp"
         android:layout_marginRight="104dp"
         android:ems="10"
-        android:hint="Email Address"
+        android:hint="@string/email_address"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+        app:layout_constraintTop_toBottomOf="@+id/user_name"
+        android:autofillHints="Email Address"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
