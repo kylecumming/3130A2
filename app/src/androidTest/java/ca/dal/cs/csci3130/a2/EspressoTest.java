@@ -5,6 +5,7 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import org.junit.Rule;
 import org.junit.Test;
 
+import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.typeText;
@@ -40,6 +41,12 @@ public class EspressoTest {
         onView(withId(R.id.register_button))
                 .perform(click())
                 .check(matches(isDisplayed()));
+    }
+    @Test
+    public void at4(){
+        onData(withId(R.id.user_name))
+                .perform(typeText("User name does not meet requirements"))
+                .check(matches(R.id.username_error));
     }
 
 
